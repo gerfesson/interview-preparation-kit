@@ -15,6 +15,8 @@ public class RepeatedString {
         if(size > 0){
             multiply = n/size;
             remainder = n%size;
+        } else {
+            return 0;
         }
         for(int i=0; i<size; i++){
             if(sr[i] == 'a'){
@@ -22,11 +24,11 @@ public class RepeatedString {
                     sumremainder++;
                 }
                 summultiply++;
-                j++;
             }
+            j++;
         }
         if(remainder > multiply){
-            return remainder;
+            return sumremainder;
         } else {
             return ((summultiply*multiply)+sumremainder);
         }
